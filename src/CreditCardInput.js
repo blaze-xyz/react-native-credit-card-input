@@ -24,12 +24,16 @@ const s = StyleSheet.create({
   },
   inputContainer: {
     marginLeft: 20,
+    marginTop: 10
   },
   inputLabel: {
     fontWeight: "bold",
   },
   input: {
-    height: 40,
+    height: 50,
+    borderWidth: 2,
+    borderColor: "#E6E6E6",
+    borderRadius: 13,
   },
 });
 
@@ -70,11 +74,11 @@ export default class CreditCardInput extends Component {
   static defaultProps = {
     cardViewSize: {},
     labels: {
-      name: "CARDHOLDER'S NAME",
-      number: "CARD NUMBER",
-      expiry: "EXPIRY",
+      name: "Name on card",
+      number: "Card number",
+      expiry: "Expiry",
       cvc: "CVC/CCV",
-      postalCode: "POSTAL CODE",
+      postalCode: "Postal Code",
     },
     placeholders: {
       name: "Full Name",
@@ -84,8 +88,8 @@ export default class CreditCardInput extends Component {
       postalCode: "34567",
     },
     inputContainerStyle: {
-      borderBottomWidth: 1,
-      borderBottomColor: "black",
+      // borderWidth: 1,
+      // borderColor: "black",
     },
     validColor: "",
     invalidColor: "red",

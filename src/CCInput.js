@@ -12,7 +12,11 @@ import {
 const s = StyleSheet.create({
   baseInputStyle: {
     color: "black",
+    padding: 10
   },
+  baseLabelStyle: {
+    marginBottom: 5,
+  }
 });
 
 export default class CCInput extends Component {
@@ -75,7 +79,7 @@ export default class CCInput extends Component {
       <TouchableOpacity onPress={this.focus}
         activeOpacity={0.99}>
         <View style={[containerStyle]}>
-          { !!label && <Text style={[labelStyle]}>{label}</Text>}
+          { !!label && <Text style={[s.baseLabelStyle, labelStyle]}>{label}</Text>}
           <TextInput ref="input"
             {...additionalInputProps}
             keyboardType={keyboardType}
